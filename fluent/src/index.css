@@ -78,3 +78,21 @@ a {
  text-decoration: none;
  color: black;
 }
+
+.title {
+ font-size: 18px;
+ font-weight: bold;
+ margin: 46px 0px 30px 0;
+}
+
+.title-1 {
+ color: #DF91F2;
+}
+
+.title-2 {
+ color: #91F2A6;
+}
+
+.title-3 {
+ color: #4DE3ED;
+}

@@ -1,34 +1,53 @@
 import React from 'react'
-import styled from "styled-components"
-
-
-const Container = styled.div`
- height: 100vh;
- background-color: #dbf0b5;
- overflow: hidden;
- display: flex;
- justify-content: center;
- align-items: center;
-`
-const Center = styled.div`
- width: 70%;
- overflow: hidden;
- background-color: #acf7ff;
-`
-const Section = styled.div`
-  width: 393px;
-  height: 457px;
-  background: linear-gradient(135deg, #353535 0%, #4F4F4F 39%, #DF91F2 100%);
-background-blend-mode: multiply;
-             `
+import { Container, Center, Section, About, Subtitle, Button, Image } from "../Style/Dashboard.js"
+import Rochelle from '../Image/rochelle_img1.png'
+import Frost from '../Image/frost_Img_2.svg'
+import Regina from '../Image/regina_img_3.png'
+const events = [
+  {
+    id: 1,
+    lecturer: "Rochelle Fernandez",
+    about: "Learn about no-code tools",
+    subtitle: "Live Event",
+    price: "₹499/-",
+    details: "Event Details",
+    userImg: Rochelle
+  },
+  {
+    id: 2,
+    lecturer: "Shaw Frost",
+    about: "Sell your first product online",
+    subtitle: "Live Event",
+    price: "₹499/-",
+    details: "Event Details",
+    userImg: Frost
+  },
+  {
+    id: 3,
+    lecturer: "Regina Phalange",
+    about: "Nail your interviews",
+    subtitle: "Live Event",
+    price: "₹499/-",
+    details: "Event Details",
+    userImg: Regina
+  }
+];
+ 
 const Dashboard = () => {
   return (
     <>
       <Container>
         <Center>
-          <Section>
-            
-          </Section>
+          {events.map((event, index) => (
+            <Section key={event.id}>
+              <h2 className={`title title-${index + 1}`}>{event.lecturer}</h2>
+              <About> Learn about <p>{event.about}</p> </About>
+              <Subtitle>{event.subtitle}</Subtitle>
+              <p>{event.price}</p>
+              <Button>{event.details}</Button>
+              <Image src={event.userImg} alt="" />
+            </Section>
+          ))}
         </Center>
       </Container>
     </>
@@ -36,3 +55,4 @@ const Dashboard = () => {
 }
 
 export default Dashboard
+
