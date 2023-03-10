@@ -9,12 +9,11 @@ export const Container = styled.div`
  align-items: center;
 `
 export const Center = styled.div`
- width: 67%;
+ width: 74%;
  overflow: hidden;
  display: flex;
  justify-content: space-between;
  flex-wrap: wrap;
-  background-color: #acf7ff;
 `
 export const Section = styled.div`
   width: 343px;
@@ -33,8 +32,7 @@ export const Section = styled.div`
     background: linear-gradient(147deg, #353535 0%, #4F4F4F 39%, #4DE3ED 90%);
   }
  `
-
-
+ 
 export const About = styled.div`
  font-size: 39px;
  font-weight: bold;
